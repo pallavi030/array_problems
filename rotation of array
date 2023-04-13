@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        int temp=0,z=0;
+        System.out.println("Enter array :");
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.println("Enter positions to be shifted :");
+         int d=sc.nextInt();
+         while(z!=d){
+            temp=arr[0];
+            for(int i=0;i<n-1;i++){
+                arr[i]=arr[i+1];
+            }
+            arr[n-1]=temp;
+            z++;
+         }
+         for(int i=0;i<n;i++){
+            System.out.println(arr[i]);
+        }
+        
+    }
+}
